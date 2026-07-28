@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2e0d42">
+  <title>Vivian XV — 25 De Novembro De 2026</title>
+  <meta name="description" content="Você é nosso convidado para celebrar os 15 anos de Vivian. Confira todos os detalhes desta noite especial.">
+  <meta property="og:title" content="Vivian XV">
+  <meta property="og:description" content="Uma noite para florescer — 25 de novembro de 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leleopinel.github.io/vivian-xv/">
+  <meta property="og:image" content="https://leleopinel.github.io/vivian-xv/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vivian XV">
+  <meta name="twitter:description" content="Uma noite para florescer — 25 de novembro de 2026.">
+  <meta name="twitter:image" content="https://leleopinel.github.io/vivian-xv/og.png">
+  <link rel="icon" href="og.png" type="image/png">
+  <style>
+
+:root {
+  --ink: #2f173f;
+  --purple-950: #1d0929;
+  --purple-900: #2e0d42;
+  --purple-800: #48175f;
+  --purple-700: #6b2a85;
+  --purple-600: #8844a1;
+  --lavender: #c9a7dc;
+  --lavender-soft: #eee2f3;
+  --paper: #fcf8f1;
+  --paper-deep: #f4ecdf;
+  --gold: #c29b62;
+  --gold-light: #e4c99d;
+  --white: #fffdf9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--purple-950);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.invitation-locked {
+  overflow: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.section {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+}
+
+.envelope-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 50% 40%, rgba(159, 94, 183, 0.32), transparent 34%),
+    linear-gradient(145deg, #16071f 0%, #351047 55%, #21082f 100%);
+  transition: opacity 0.7s ease 0.65s, visibility 0.7s ease 0.65s;
+}
+
+.envelope-stage::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(230, 206, 166, 0.35);
+  pointer-events: none;
+}
+
+.envelope-stage.opening {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ambient-glow {
+  position: absolute;
+  width: 40vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+}
+
+.glow-one {
+  top: -18vw;
+  left: -12vw;
+  background: #a05ec2;
+}
+
+.glow-two {
+  right: -16vw;
+  bottom: -18vw;
+  background: #e7b7eb;
+}
+
+.envelope {
+  position: relative;
+  width: min(640px, 86vw);
+  aspect-ratio: 1.48 / 1;
+  perspective: 1400px;
+  filter: drop-shadow(0 28px 48px rgba(6, 0, 10, 0.5));
+  transition: transform 0.85s cubic-bezier(0.22, 0.75, 0.2, 1);
+}
+
+.opening .envelope {
+  transform: scale(1.08) translateY(6%);
+}
+
+.envelope-paper {
+  position: absolute;
+  inset: 6% 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    repeating-linear-gradient(25deg, transparent 0 8px, rgba(97, 59, 30, 0.025) 9px 10px),
+    var(--paper);
+  color: var(--ink);
+  border-radius: 2px;
+  box-shadow: inset 0 0 38px rgba(111, 72, 42, 0.12);
+}
+
+.envelope-paper::before,
+.envelope-paper::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(112, 46, 137, 0.18);
+}
+
+.envelope-paper::after {
+  inset: 20px;
+  border-color: rgba(194, 155, 98, 0.35);
+}
+
+.envelope-paper .eyebrow {
+  margin: 0 0 14px;
+  color: var(--purple-700);
+}
+
+.envelope-paper h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 9vw, 6.1rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.envelope-paper h1 span {
+  margin-left: 0.12em;
+  color: var(--purple-700);
+  font-size: 0.34em;
+  letter-spacing: 0.14em;
+  vertical-align: 0.85em;
+}
+
+.envelope-date {
+  margin: 18px 0 0;
+  color: #765a80;
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 68%);
+  transform-origin: top;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.52), transparent 30%),
+    linear-gradient(135deg, #f7efe5 0%, #efe3d4 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.85s cubic-bezier(0.58, -0.1, 0.25, 1);
+  z-index: 3;
+}
+
+.opening .envelope-flap {
+  transform: rotateX(178deg);
+}
+
+.wax-seal {
+  position: absolute;
+  z-index: 5;
+  top: 47%;
+  left: 50%;
+  width: 94px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #f2dcb7;
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.38), transparent 8%),
+    radial-gradient(circle at 52% 55%, #71308d 0 42%, #531d6a 57%, #3c104e 72%);
+  box-shadow:
+    0 10px 18px rgba(50, 10, 67, 0.35),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.07),
+    inset 0 0 0 8px rgba(30, 3, 40, 0.18);
+  transition: transform 0.25s ease, filter 0.25s ease, opacity 0.35s ease 0.45s;
+  animation: sealPulse 2.2s ease-in-out infinite;
+}
+
+.wax-seal::before,
+.wax-seal::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #5c2174;
+  z-index: -1;
+}
+
+.wax-seal::before {
+  inset: -6px 3px 2px -4px;
+}
+
+.wax-seal::after {
+  inset: 1px -5px -5px 3px;
+}
+
+.wax-seal:hover,
+.wax-seal:focus-visible {
+  transform: translate(-50%, -50%) scale(1.08);
+  filter: brightness(1.1);
+  outline: 2px solid var(--gold-light);
+  outline-offset: 6px;
+}
+
+.opening .wax-seal {
+  transform: translate(-50%, -50%) scale(0.7) rotate(-12deg);
+  opacity: 0;
+  animation: none;
+}
+
+.seal-mark {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  font-style: italic;
+  text-shadow: 0 1px 0 #2b0c38;
+}
+
+.open-hint {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: -54px;
+  margin: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.69rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+@keyframes sealPulse {
+  0%, 100% { box-shadow: 0 10px 18px rgba(50, 10, 67, 0.35), 0 0 0 0 rgba(216, 172, 229, 0.22), inset 0 0 0 5px rgba(255, 255, 255, 0.07), inset 0 0 0 8px rgba(30, 3, 40, 0.18); }
+  55% { box-shadow: 0 10px 18px rgba(50, 10, 67, 0.35), 0 0 0 14px rgba(216, 172, 229, 0), inset 0 0 0 5px rgba(255, 255, 255, 0.07), inset 0 0 0 8px rgba(30, 3, 40, 0.18); }
+}
+
+.invitation {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.invitation.visible {
+  opacity: 1;
+  visibility: visible;
+  animation: invitationReveal 1s ease both;
+}
+
+@keyframes invitationReveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.floating-nav {
+  position: fixed;
+  z-index: 50;
+  top: 18px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px;
+  transform: translateX(-50%);
+  color: var(--white);
+  background: rgba(36, 9, 49, 0.78);
+  border: 1px solid rgba(227, 200, 236, 0.25);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(20, 4, 28, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.floating-nav > a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: var(--gold-light);
+  border: 1px solid rgba(225, 193, 151, 0.5);
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.floating-nav > div {
+  display: flex;
+  gap: 3px;
+}
+
+.floating-nav > div a {
+  padding: 9px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease;
+}
+
+.floating-nav > div a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  padding: 112px 24px 70px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.96), rgba(253, 248, 240, 0.93) 48%, rgba(238, 223, 231, 0.9) 100%),
+    var(--paper);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero::before {
+  inset: 18px;
+  border: 1px solid rgba(111, 41, 134, 0.15);
+}
+
+.hero::after {
+  inset: 25px;
+  border: 1px solid rgba(194, 155, 98, 0.2);
+}
+
+.paper-texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background-image:
+    repeating-linear-gradient(17deg, transparent 0 8px, rgba(83, 47, 28, 0.035) 9px 10px),
+    repeating-linear-gradient(107deg, transparent 0 10px, rgba(83, 47, 28, 0.02) 11px 12px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: min(760px, 100%);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--purple-700);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.display-title {
+  margin: 8px 0 26px;
+  color: var(--purple-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.8rem, 13vw, 9.2rem);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.08em;
+}
+
+.display-title em {
+  display: inline-block;
+  margin-left: 0.18em;
+  color: var(--gold);
+  font-size: 0.24em;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  transform: translateY(-1.6em);
+}
+
+.poem {
+  margin: 0 auto;
+  color: #573d5f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 2.8vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.poem p {
+  margin: 0;
+}
+
+.delicate-rule {
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin: 28px auto;
+  background: var(--gold);
+  position: relative;
+}
+
+.delicate-rule::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 9px;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  background: var(--paper);
+  font-size: 0.56rem;
+}
+
+.welcome-copy {
+  width: min(570px, 100%);
+  margin: 0 auto;
+  color: #654f69;
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+.scroll-cue {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-top: 34px;
+  color: var(--purple-700);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scroll-cue i {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  animation: bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--purple-700);
+}
+
+.section-label p {
+  margin: 0;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+}
+
+.section-label span {
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+}
+
+.date-section {
+  display: grid;
+  place-items: center;
+  padding: 92px 22px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.14), transparent 42%),
+    linear-gradient(145deg, #260a36, #4b1761 58%, #2c0a3c);
+}
+
+.date-card {
+  position: relative;
+  z-index: 3;
+  width: min(760px, 100%);
+  padding: clamp(38px, 7vw, 70px);
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)),
+    repeating-linear-gradient(35deg, transparent 0 9px, rgba(92, 45, 43, 0.04) 10px 11px),
+    var(--paper);
+  border: 1px solid rgba(231, 208, 172, 0.7);
+  box-shadow: 0 30px 70px rgba(13, 0, 19, 0.38);
+}
+
+.date-card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(109, 43, 131, 0.2);
+  pointer-events: none;
+}
+
+.weekday {
+  margin: 35px 0 2px;
+  color: #735e78;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.date-lockup {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.date-lockup strong {
+  color: var(--purple-800);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 16vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.date-lockup span {
+  padding: 10px 0;
+  color: #6e5675;
+  border-top: 1px solid rgba(115, 81, 121, 0.25);
+  border-bottom: 1px solid rgba(115, 81, 121, 0.25);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.time {
+  margin: 14px 0 0;
+  color: #6e5675;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.time strong {
+  color: var(--purple-800);
+  font-size: 1.45rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.venue-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 35px 0 22px;
+  color: var(--gold);
+}
+
+.venue-divider::before,
+.venue-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(194, 155, 98, 0.38);
+}
+
+.venue-divider span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(194, 155, 98, 0.5);
+  border-radius: 50%;
+}
+
+.date-card h2,
+.countdown-section h2,
+.guide-section > h2,
+.gift-panel h2 {
+  margin: 0;
+  color: var(--purple-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.date-card h2 {
+  font-size: clamp(2rem, 5vw, 3.15rem);
+}
+
+.date-card address {
+  margin: 12px 0 26px;
+  color: #6d596f;
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.map-frame {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(74, 24, 94, 0.18);
+  background: var(--lavender-soft);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.7) sepia(0.22) hue-rotate(225deg) saturate(0.8);
+}
+
+.map-frame a {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 12px 16px;
+  color: var(--white);
+  background: rgba(47, 13, 63, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(31, 5, 42, 0.2);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.map-frame a span {
+  color: var(--gold-light);
+}
+
+.rsvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.rsvp p {
+  margin: 0;
+  color: #755e79;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.rsvp > strong {
+  margin: 6px 0 18px;
+  color: var(--purple-800);
+  font-family: Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+
+.rsvp a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 24px;
+  color: var(--white);
+  background: var(--purple-800);
+  border: 1px solid var(--purple-800);
+  border-radius: 3px;
+  box-shadow: 0 10px 24px rgba(71, 21, 91, 0.2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.rsvp a:hover {
+  transform: translateY(-2px);
+  background: var(--purple-700);
+}
+
+.rsvp a span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: var(--purple-800);
+  background: var(--gold-light);
+  border-radius: 50%;
+}
+
+.rsvp small {
+  margin-top: 9px;
+  color: #8b788f;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 22px;
+  color: var(--white);
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(129, 61, 151, 0.32), transparent 38%),
+    linear-gradient(155deg, #180622, #300c41 52%, #21072d);
+}
+
+.countdown-section::before {
+  content: "";
+  position: absolute;
+  inset: 19px;
+  border: 1px solid rgba(230, 207, 167, 0.28);
+}
+
+.countdown-section .section-label {
+  color: var(--gold-light);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  color: var(--gold-light);
+  opacity: 0.8;
+}
+
+.stars span:nth-child(even) {
+  font-size: 0.7rem;
+  opacity: 0.55;
+}
+
+.countdown-section h2 {
+  width: min(720px, 100%);
+  margin-top: 22px;
+  color: var(--white);
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  line-height: 1.03;
+}
+
+.countdown-section > p {
+  width: min(530px, 100%);
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-family: Georgia, serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: min(820px, 100%);
+  margin-top: 52px;
+  border-top: 1px solid rgba(223, 195, 233, 0.18);
+  border-bottom: 1px solid rgba(223, 195, 233, 0.18);
+}
+
+.countdown-item {
+  position: relative;
+  padding: 30px 12px 27px;
+}
+
+.countdown-item + .countdown-item::before {
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 1px;
+  height: 56%;
+  background: rgba(223, 195, 233, 0.18);
+}
+
+.countdown-item strong {
+  display: block;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.countdown-item span {
+  display: block;
+  margin-top: 10px;
+  color: var(--lavender);
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.save-date {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 42px;
+  padding: 15px 26px;
+  border: 1px solid rgba(226, 195, 149, 0.35);
+}
+
+.save-date span {
+  color: var(--gold-light);
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+.save-date strong {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+}
+
+.guide-section {
+  padding: 110px max(22px, calc((100vw - 1100px) / 2));
+  background:
+    linear-gradient(rgba(252, 248, 241, 0.95), rgba(252, 248, 241, 0.95)),
+    repeating-linear-gradient(20deg, transparent 0 9px, rgba(80, 48, 31, 0.04) 10px 11px);
+}
+
+.guide-section > h2 {
+  margin: 20px auto 48px;
+  text-align: center;
+  font-size: clamp(2.7rem, 6vw, 4.6rem);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  background: rgba(95, 44, 111, 0.13);
+  border: 1px solid rgba(95, 44, 111, 0.13);
+}
+
+.detail-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  min-height: 158px;
+  padding: 30px;
+  background: rgba(255, 253, 249, 0.86);
+}
+
+.detail-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  color: var(--purple-700);
+  border: 1px solid rgba(116, 53, 136, 0.25);
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.detail-card h3 {
+  margin: 2px 0 9px;
+  color: var(--purple-900);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.detail-card p {
+  margin: 0;
+  color: #6d5a70;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.gift-panel {
+  position: relative;
+  margin-top: 80px;
+  padding: clamp(38px, 7vw, 72px);
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(145deg, #efe1f1, #f7eff2 60%, #eadbed);
+  border: 1px solid rgba(103, 44, 122, 0.16);
+}
+
+.gift-panel::before,
+.gift-panel::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(100, 38, 120, 0.12);
+  font-family: Georgia, serif;
+  font-size: 11rem;
+}
+
+.gift-panel::before {
+  top: -58px;
+  left: -30px;
+}
+
+.gift-panel::after {
+  right: -20px;
+  bottom: -65px;
+}
+
+.gift-kicker {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 12px;
+  color: var(--purple-700);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.gift-panel h2 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.7rem, 6vw, 4.4rem);
+}
+
+.gift-subtitle {
+  position: relative;
+  z-index: 2;
+  margin: 18px 0 24px;
+  color: #735c79;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.gift-tags {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+}
+
+.gift-tags span {
+  padding: 10px 15px;
+  color: #5e3868;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(110, 51, 129, 0.16);
+  border-radius: 999px;
+  font-size: 0.76rem;
+}
+
+.pix-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  width: min(520px, 100%);
+  margin: 32px auto 0;
+  padding: 16px;
+  text-align: left;
+  background: rgba(255, 253, 249, 0.78);
+  border: 1px solid rgba(101, 39, 121, 0.18);
+  box-shadow: 0 12px 28px rgba(80, 34, 95, 0.08);
+}
+
+.pix-icon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  color: var(--white);
+  background: var(--purple-700);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.pix-card div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pix-card div:nth-child(2) span {
+  color: #826d87;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.pix-card div:nth-child(2) strong {
+  color: var(--purple-900);
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.pix-card button {
+  padding: 11px 15px;
+  color: var(--white);
+  background: var(--purple-800);
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.presence-gift {
+  position: relative;
+  z-index: 2;
+  margin: 30px auto 0;
+  color: #6b4f70;
+  font-family: Georgia, serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+  padding: 70px 22px;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(126, 62, 148, 0.35), transparent 35%),
+    var(--purple-950);
+}
+
+footer > .floral-cluster {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  opacity: 0.65;
+  transform: translateX(-50%) rotate(90deg) scale(0.85);
+}
+
+footer .monogram-wrap {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 18px 0 7px;
+  color: var(--gold-light);
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+footer > span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+}
+
+.monogram-wrap {
+  position: relative;
+  width: 172px;
+  height: 172px;
+  margin: 24px auto 20px;
+}
+
+.monogram-ring {
+  position: absolute;
+  inset: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(129, 61, 151, 0.55);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 5px rgba(194, 155, 98, 0.12);
+}
+
+.monogram-ring::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(194, 155, 98, 0.45);
+  border-radius: 50%;
+}
+
+.roman-v {
+  color: var(--purple-800);
+  font-family: Georgia, serif;
+  font-size: 5.4rem;
+  font-style: italic;
+  line-height: 1;
+  transform: translate(-3px, 1px);
+}
+
+.roman-x {
+  position: absolute;
+  z-index: 2;
+  top: 31px;
+  left: 31px;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-style: italic;
+}
+
+.monogram-wrap.small {
+  width: 112px;
+  height: 112px;
+}
+
+.small .monogram-ring {
+  inset: 16px;
+  border-color: rgba(231, 203, 235, 0.5);
+}
+
+.small .roman-v {
+  color: var(--white);
+  font-size: 3.6rem;
+}
+
+.small .roman-x {
+  top: 18px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+.floral-cluster {
+  position: absolute;
+  width: 240px;
+  height: 270px;
+  pointer-events: none;
+}
+
+.floral-cluster.compact {
+  width: 140px;
+  height: 160px;
+}
+
+.stem {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 2px;
+  height: 84%;
+  border-radius: 50%;
+  background: linear-gradient(#6a8146, #334b27);
+  transform-origin: bottom;
+}
+
+.stem-one { transform: rotate(-18deg); }
+.stem-two { transform: rotate(17deg); }
+
+.lavender {
+  position: absolute;
+  width: 31px;
+  height: 47px;
+  transform-origin: 50% 100%;
+}
+
+.lavender i {
+  position: absolute;
+  width: 15px;
+  height: 10px;
+  background: linear-gradient(135deg, #c99bd9, #7c3d98 68%);
+  border-radius: 80% 10% 80% 20%;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.22);
+}
+
+.lavender i:nth-child(1) { top: 4px; left: 2px; transform: rotate(35deg); }
+.lavender i:nth-child(2) { top: 14px; right: 1px; transform: scaleX(-1) rotate(34deg); }
+.lavender i:nth-child(3) { top: 23px; left: 0; transform: rotate(32deg); }
+.lavender i:nth-child(4) { top: 31px; right: 3px; transform: scaleX(-1) rotate(32deg); }
+.lavender b {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 1px;
+  height: 18px;
+  background: #526837;
+  transform-origin: bottom;
+}
+
+.lavender-1 { left: 25%; top: 8%; transform: rotate(-32deg); }
+.lavender-2 { left: 51%; top: 2%; transform: rotate(2deg) scale(1.05); }
+.lavender-3 { left: 68%; top: 14%; transform: rotate(27deg); }
+.lavender-4 { left: 10%; top: 29%; transform: rotate(-45deg) scale(0.92); }
+.lavender-5 { left: 38%; top: 27%; transform: rotate(-12deg) scale(0.9); }
+.lavender-6 { left: 65%; top: 37%; transform: rotate(26deg) scale(0.88); }
+.lavender-7 { left: 22%; top: 50%; transform: rotate(-31deg) scale(0.78); }
+.lavender-8 { left: 50%; top: 52%; transform: rotate(4deg) scale(0.75); }
+.lavender-9 { left: 70%; top: 58%; transform: rotate(37deg) scale(0.7); }
+
+.leaf {
+  position: absolute;
+  width: 52px;
+  height: 19px;
+  background: linear-gradient(145deg, #738b50, #3f5e31);
+  border-radius: 100% 0 100% 0;
+  transform-origin: right center;
+}
+
+.leaf-one { left: 17%; bottom: 26%; transform: rotate(28deg); }
+.leaf-two { right: 16%; bottom: 31%; transform: scaleX(-1) rotate(25deg); }
+.leaf-three { left: 31%; bottom: 13%; transform: rotate(4deg) scale(0.8); }
+
+.compact .lavender {
+  transform-origin: 50% 100%;
+}
+
+.compact .lavender-6,
+.compact .lavender-7,
+.compact .lavender-8,
+.compact .lavender-9 {
+  display: none;
+}
+
+.monogram-flowers {
+  z-index: 3;
+  transform: scale(0.56);
+}
+
+.top-flowers {
+  top: -54px;
+  right: -44px;
+  transform: rotate(33deg) scale(0.48);
+}
+
+.bottom-flowers {
+  bottom: -55px;
+  left: -42px;
+  transform: rotate(210deg) scale(0.48);
+}
+
+.small .monogram-flowers {
+  display: none;
+}
+
+.hero-flower-left {
+  left: -45px;
+  bottom: -20px;
+  transform: rotate(-18deg) scale(1.15);
+  opacity: 0.75;
+}
+
+.hero-flower-right {
+  top: 26px;
+  right: -45px;
+  transform: rotate(160deg) scale(1.1);
+  opacity: 0.7;
+}
+
+.envelope-flower-left {
+  left: -35px;
+  bottom: -15px;
+  transform: rotate(-23deg) scale(1.15);
+  opacity: 0.75;
+}
+
+.envelope-flower-right {
+  top: -45px;
+  right: -28px;
+  transform: rotate(155deg) scale(1.25);
+  opacity: 0.65;
+}
+
+.date-flower-left {
+  left: -15px;
+  bottom: 0;
+  transform: rotate(-14deg) scale(1.5);
+  opacity: 0.45;
+}
+
+.date-flower-right {
+  top: 0;
+  right: -18px;
+  transform: rotate(165deg) scale(1.5);
+  opacity: 0.42;
+}
+
+.guide-flower {
+  top: -15px;
+  right: -14px;
+  transform: rotate(155deg) scale(1.8);
+  opacity: 0.38;
+}
+
+@media (max-width: 720px) {
+  .envelope-stage::before,
+  .hero::before,
+  .hero::after,
+  .countdown-section::before {
+    inset: 10px;
+  }
+
+  .envelope {
+    width: 91vw;
+  }
+
+  .wax-seal {
+    width: 78px;
+  }
+
+  .open-hint {
+    bottom: -48px;
+  }
+
+  .floating-nav {
+    top: auto;
+    bottom: 12px;
+  }
+
+  .hero {
+    padding-top: 82px;
+    padding-bottom: 92px;
+  }
+
+  .hero-flower-left,
+  .hero-flower-right {
+    opacity: 0.37;
+    transform: scale(0.75) rotate(-18deg);
+  }
+
+  .hero-flower-right {
+    transform: scale(0.75) rotate(160deg);
+  }
+
+  .display-title {
+    margin-top: 15px;
+  }
+
+  .date-section {
+    padding: 60px 11px 86px;
+  }
+
+  .date-card {
+    padding: 42px 26px;
+  }
+
+  .date-card::before {
+    inset: 8px;
+  }
+
+  .date-lockup {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+  }
+
+  .date-lockup span {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .map-frame {
+    height: 230px;
+  }
+
+  .countdown-section {
+    padding: 92px 14px;
+  }
+
+  .countdown {
+    gap: 0;
+  }
+
+  .countdown-item {
+    padding: 24px 5px 22px;
+  }
+
+  .countdown-item strong {
+    font-size: clamp(2.2rem, 12vw, 3.7rem);
+  }
+
+  .countdown-item span {
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+  }
+
+  .guide-section {
+    padding: 88px 14px 95px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .gift-panel {
+    margin-top: 50px;
+    padding: 42px 18px;
+  }
+
+  .pix-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .pix-card button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .floating-nav > div a {
+    padding: 9px 7px;
+    font-size: 0.62rem;
+  }
+
+  .envelope-paper h1 {
+    font-size: 3.5rem;
+  }
+
+  .envelope-paper .eyebrow {
+    font-size: 0.53rem;
+    letter-spacing: 0.18em;
+  }
+
+  .monogram-wrap {
+    transform: scale(0.88);
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  .poem {
+    font-size: 1rem;
+  }
+
+  .welcome-copy {
+    font-size: 0.86rem;
+  }
+
+  .date-lockup strong {
+    font-size: 4.4rem;
+  }
+
+  .date-lockup span {
+    padding: 7px 0;
+  }
+
+  .rsvp a {
+    padding: 14px 16px;
+    font-size: 0.67rem;
+  }
+
+  .countdown-section h2,
+  .guide-section > h2,
+  .gift-panel h2 {
+    font-size: 2.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="envelope-stage "><div class="ambient-glow glow-one"></div><div class="ambient-glow glow-two"></div><div class="floral-cluster  envelope-flower-left" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-6"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-7"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-8"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-9"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="floral-cluster  envelope-flower-right" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-6"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-7"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-8"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-9"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="envelope"><div class="envelope-paper"><p class="eyebrow">Uma Noite Para Florescer</p><h1>Vivian <span>XV</span></h1><p class="envelope-date">25 · 11 · 2026</p></div><div class="envelope-flap"></div><button class="wax-seal" type="button" aria-label="Tocar para abrir o convite de Vivian"><span class="seal-shine"></span><span class="seal-mark">V</span></button><p class="open-hint">Toque No Lacre Para Abrir</p></div></div><main class="invitation"><nav class="floating-nav" aria-label="Navegação do convite"><a href="#inicio" aria-label="Ir para o início">V</a><div><a href="#data">Data</a><a href="#contagem">Contagem</a><a href="#guia">Guia</a></div></nav><section class="hero section" id="inicio"><div class="paper-texture"></div><div class="floral-cluster  hero-flower hero-flower-left" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-6"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-7"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-8"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-9"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="floral-cluster  hero-flower hero-flower-right" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-6"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-7"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-8"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-9"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="hero-content"><p class="eyebrow reveal">Uma Celebração Em Flor</p><div class="monogram-wrap " aria-label="Monograma XV de Vivian"><div class="floral-cluster compact monogram-flowers top-flowers" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="monogram-ring"><span class="roman-x">x</span><span class="roman-v">V</span></div><div class="floral-cluster compact monogram-flowers bottom-flowers" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div></div><h1 class="display-title">Vivian <em>XV</em></h1><div class="poem"><p>Há tempos que passam</p><p>e tempos que florescem.</p><p>Quinze anos não contam só dias:</p><p>guardam sonhos, abraços e começos.</p></div><span class="delicate-rule"></span><p class="welcome-copy">Entre memórias que me trouxeram até aqui e sonhos que já começam a florescer, quero ter você comigo nesta noite tão especial.</p><a class="scroll-cue" href="#data"><span>Descubra Os Detalhes</span><i>↓</i></a></div></section><section class="date-section section" id="data"><div class="floral-cluster compact date-flower-left" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="date-card"><div class="section-label"><span></span><p>Nosso Encontro</p><span></span></div><p class="weekday">Quarta-Feira</p><div class="date-lockup"><span class="month">Novembro</span><strong>25</strong><span class="year">2026</span></div><p class="time">Às <strong>20h30</strong></p><div class="venue-divider"><span>⌖</span></div><h2>Casa De Festas Elite</h2><address>Rua Vítor Meireles, 485<br/>Riachuelo, Rio De Janeiro</address><div class="map-frame"><iframe title="Mapa para Casa de Festas Elite" src="https://www.google.com/maps?q=Casa%20de%20Festas%20Elite%2C%20Rua%20V%C3%ADtor%20Meireles%2C%20485%2C%20Riachuelo%2C%20Rio%20de%20Janeiro&amp;output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+de+Festas+Elite%2C+Rua+V%C3%ADtor+Meireles%2C+485%2C+Riachuelo%2C+Rio+de+Janeiro" target="_blank" rel="noreferrer">Abrir Rota No Mapa <span>↗</span></a></div><div class="rsvp"><p>Confirme Sua Presença Até</p><strong>15 De Outubro</strong><a href="https://wa.me/5521959324408?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Vivian.%20%F0%9F%92%9C" target="_blank" rel="noreferrer"><span>✓</span> Confirmar Pelo WhatsApp</a><small>+55 21 95932-4408</small></div></div><div class="floral-cluster compact date-flower-right" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div></section><section class="countdown-section section" id="contagem"><div class="stars" aria-hidden="true"><span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span></div><div class="section-label"><span></span><p>Contagem Regressiva</p><span></span></div><h2>Falta Pouco Para A Nossa Noite</h2><p>Cada dia que passa deixa esse sonho mais perto de florescer.</p><div class="countdown" aria-live="polite" aria-label="Tempo restante para a festa"><div class="countdown-item"><strong>119</strong><span>Dias</span></div><div class="countdown-item"><strong>23</strong><span>Horas</span></div><div class="countdown-item"><strong>39</strong><span>Minutos</span></div><div class="countdown-item"><strong>28</strong><span>Segundos</span></div></div><div class="save-date"><span>Reserve Esta Data</span><strong>25 · 11 · 2026</strong></div></section><section class="guide-section section" id="guia"><div class="floral-cluster compact guide-flower" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="section-label"><span></span><p>Guia Do Convidado</p><span></span></div><h2>Alguns Detalhes Importantes</h2><div class="detail-grid"><article class="detail-card"><span class="detail-icon" aria-hidden="true">♢</span><div><h3>Traje</h3><p>Esporte fino. Por carinho ao tema da noite, não use roxo ou lilás.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✓</span><div><h3>Confirmação</h3><p>Confirme sua presença até 15 de outubro.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">◷</span><div><h3>Horário</h3><p>Chegue no horário para não perder nenhum momento.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✉</span><div><h3>Convite</h3><p>Este convite é pessoal e não se estende a acompanhantes.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">♧</span><div><h3>Pertences</h3><p>Cuide dos seus itens pessoais durante a festa.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✦</span><div><h3>Lembrete</h3><p>Venha pronto para aproveitar muito e criar memórias.</p></div></article></div><div class="gift-panel"><p class="gift-kicker">Com Carinho</p><h2>Se Quiser Me Presentear</h2><p class="gift-subtitle">Sugestões De Presentes</p><div class="gift-tags"><span>Joias</span><span>Roupas</span><span>Perfume</span><span>Calçado 37–38</span><span>Maquiagem</span></div><div class="pix-card"><div class="pix-icon" aria-hidden="true">◇</div><div><span>Chave Pix</span><strong>+55 21 95932-4408</strong></div><button type="button">Copiar</button></div><p class="presence-gift">Sua presença e seu carinho já são o meu maior presente.</p></div></section><footer><div class="floral-cluster compact " aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="monogram-wrap small" aria-label="Monograma XV de Vivian"><div class="floral-cluster compact monogram-flowers top-flowers" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="monogram-ring"><span class="roman-x">x</span><span class="roman-v">V</span></div><div class="floral-cluster compact monogram-flowers bottom-flowers" aria-hidden="true"><span class="stem stem-one"></span><span class="stem stem-two"></span><span class="lavender lavender-1"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-2"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-3"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-4"><i></i><i></i><i></i><i></i><b></b></span><span class="lavender lavender-5"><i></i><i></i><i></i><i></i><b></b></span><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div></div><p>Com Amor, Vivian</p><span>25 · 11 · 2026</span></footer></main>
+<script>
+const EVENT_DATE = new Date("2026-11-25T20:30:00-03:00").getTime();
+const stage = document.querySelector(".envelope-stage");
+const invitation = document.querySelector(".invitation");
+const seal = document.querySelector(".wax-seal");
+const countdownItems = [...document.querySelectorAll(".countdown-item")];
+const pixButton = document.querySelector(".pix-card button");
+document.body.classList.add("invitation-locked");
+
+seal?.addEventListener("click", () => {
+  if (stage.classList.contains("opening")) return;
+  stage.classList.add("opening");
+  window.setTimeout(() => {
+    stage.remove();
+    invitation.classList.add("visible");
+    document.body.classList.remove("invitation-locked");
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, 900);
+});
+
+function updateCountdown() {
+  const difference = Math.max(0, EVENT_DATE - Date.now());
+  const values = [
+    Math.floor(difference / 86400000),
+    Math.floor((difference / 3600000) % 24),
+    Math.floor((difference / 60000) % 60),
+    Math.floor((difference / 1000) % 60)
+  ];
+  countdownItems.forEach((item, index) => {
+    const number = item.querySelector("strong");
+    if (number) number.textContent = String(values[index]).padStart(2, "0");
+  });
+}
+
+updateCountdown();
+window.setInterval(updateCountdown, 1000);
+
+pixButton?.addEventListener("click", async () => {
+  const key = "+55 21 95932-4408";
+  try {
+    await navigator.clipboard.writeText(key);
+  } catch {
+    const input = document.createElement("textarea");
+    input.value = key;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+  }
+  pixButton.textContent = "Copiado ✓";
+  window.setTimeout(() => {
+    pixButton.textContent = "Copiar";
+  }, 2200);
+});
+</script>
+</body>
+</html>
