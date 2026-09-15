@@ -1937,30 +1937,115 @@ footer .custom-monogram { width: 104px; padding: 7px; background: #fff; border-r
  .stationery-opening .opening-photo { height: clamp(120px,20svh,180px); }
  .stationery-opening .seal-button { width: 100%; max-width: 340px; }
 }
-.stationery-monogram, .custom-title, .custom-monogram, .stationery-monogram img, .custom-title img, .custom-monogram img { mix-blend-mode: normal; } footer .custom-monogram { background: transparent; padding: 0; border-radius: 0; overflow: visible; }</style>
+.stationery-monogram, .custom-title, .custom-monogram, .stationery-monogram img, .custom-title img, .custom-monogram img { mix-blend-mode: normal; } footer .custom-monogram { background: transparent; padding: 0; border-radius: 0; overflow: visible; }
+/* Vivian's portrait cover */
+.spotlight-opening {
+ display: block; isolation: isolate; background: radial-gradient(ellipse at 62% 28%,#fffafc 0%,#fcecf6 33%,transparent 68%),linear-gradient(125deg,#ae538f 0%,#e5a9ca 30%,#f8e3ef 59%,#edbddb 100%);
+}
+.spotlight-opening::before { content: ''; position: absolute; z-index: 4; inset: 22px; border: 1px solid #ffffff85; pointer-events: none; }
+.spotlight-opening::after { content: ''; position: absolute; z-index: 0; width: 80vw; height: 80vw; left: -48vw; top: -24vw; border: 1px solid #ffffff66; border-radius: 50%; box-shadow: 0 0 0 60px #ffffff09,0 0 0 120px #ffffff08; pointer-events:none; }
+.cover-topline { position:absolute; z-index:5; left:0; right:0; top:32px; margin:0; text-align:center; color:#6d254f; text-transform:uppercase; font-size:.62rem; letter-spacing:.3em; }
+.cover-orbit { position:absolute; z-index:0; width:60vw; height:80vw; max-height:1100px; border:1px solid #fff8; border-radius:50%; left:-5vw; top:8vh; transform:rotate(-25deg); background:linear-gradient(100deg,#ffffff0a,#ffffff22); }
+.cover-portrait { position:absolute; z-index:2; bottom:0; left:0; width:57%; height:90%; display:flex; align-items:flex-end; justify-content:center; pointer-events:none; }
+.cover-portrait img { width:100%; height:100%; object-fit:contain; object-position:bottom center; filter:drop-shadow(14px 12px 18px #65244533); }
+.cover-copy { position:absolute; z-index:3; left:54%; top:50%; width:40%; transform:translateY(-60%); text-align:center; color:#721756; }
+.cover-eyebrow { margin:0 0 24px; font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.22em; }
+.cover-brand { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.cover-logo { width:clamp(110px,12vw,180px); height:auto; margin:0; transform:none; }
+.cover-brand h1 { width:min(420px,100%); margin:0; padding:0; line-height:1; transform:none; }
+.cover-name { width:100%; height:auto; margin:0; transform:none; }
+.cover-date { margin:18px 0 0; font:400 .95rem/1.5 Georgia,serif; letter-spacing:.2em; }
+.cover-date span { margin:0 7px; color:#b48a58; }
+.cover-message { margin:22px 0 0; font:italic 1.1rem/1.6 Georgia,serif; color:#8b4c73; }
+.cover-action { position:absolute; z-index:6; left:54%; bottom:9%; width:40%; display:flex; flex-direction:column; align-items:center; }
+.open-cover-button { border:1px solid #a24c86; border-radius:999px; background:linear-gradient(120deg,#941275,#620c55); box-shadow:0 10px 30px #790d5c33,0 0 0 5px #fff5; color:#fff; min-height:60px; padding:18px 26px; display:flex; align-items:center; justify-content:center; gap:18px; font:700 .82rem/1.3 "Trebuchet MS",sans-serif; cursor:pointer; transition:transform .2s,box-shadow .2s; }
+.open-cover-button span { font-size:1.25rem; font-weight:400; }
+.open-cover-button:hover { transform:translateY(-3px); box-shadow:0 14px 32px #790d5c55,0 0 0 7px #fff7; }
+.open-cover-button:focus-visible { outline:3px solid #70104f; outline-offset:8px; }
+.cover-action p { margin:15px 0 0; font-size:.62rem; color:#753054; letter-spacing:.06em; }
+.cover-sparkles { position:absolute; z-index:1; inset:0; pointer-events:none; }
+.cover-sparkles span { position:absolute; color:#fffbed; text-shadow:0 0 18px #fff; animation:coverTwinkle 4s ease-in-out infinite alternate; }
+.cover-sparkles span:nth-child(1) { left:12%; top:19%; font-size:35px; }
+.cover-sparkles span:nth-child(2) { right:8%; top:19%; font-size:29px; animation-delay:-2s; }
+.cover-sparkles span:nth-child(3) { right:9%; bottom:29%; font-size:20px; animation-delay:-1s; }
+.cover-sparkles span:nth-child(4) { left:48%; top:38%; font-size:21px; animation-delay:-3s; }
+@keyframes coverTwinkle { from { opacity:.4; } to { opacity:1; } }
+.hero-copy .custom-monogram, .hero-copy .custom-title { position:relative; left:auto; right:auto; transform:none; margin-left:auto; margin-right:auto; }
+.hero .portrait-arch img { object-position:center 55%; }
+@media(max-width:760px) {
+ .spotlight-opening::before { inset:12px; }
+ .cover-topline { top:28px; font-size:.48rem; letter-spacing:.22em; }
+ .cover-orbit { width:120vw; height:125vw; top:27%; left:-61vw; }
+ .cover-portrait { width:91%; height:65%; bottom:94px; left:-21%; }
+ .cover-copy { left:40%; width:55%; top:13%; transform:none; }
+ .cover-eyebrow { font-size:.45rem; line-height:1.7; letter-spacing:.12em; margin-bottom:15px; }
+ .cover-logo { width:108px; }
+ .cover-brand { gap:6px; }
+ .cover-date { font-size:.7rem; margin-top:10px; letter-spacing:.1em; }
+ .cover-date span { margin:0 2px; }
+ .cover-message { margin-top:17px; font-size:.9rem; }
+ .cover-action { left:6%; width:88%; bottom:max(28px,env(safe-area-inset-bottom)); }
+ .open-cover-button { width:100%; max-width:370px; min-height:58px; padding:16px 12px; font-size:.78rem; gap:12px; }
+ .cover-action p { margin-top:13px; font-size:.56rem; }
+ .cover-sparkles span:nth-child(1) { left:8%; top:18%; font-size:23px; }
+ .cover-sparkles span:nth-child(2) { right:9%; top:8%; font-size:20px; }
+ .cover-sparkles span:nth-child(4) { left:18%; top:29%; font-size:18px; }
+ .hero { padding-top:36px; gap:38px; }
+ .hero .hero-portrait { order:0; width:min(430px,87vw); }
+ .hero .hero-copy { order:1; }
+ .hero .portrait-arch { aspect-ratio:2 / 3; max-height:76svh; border-width:6px; }
+ .hero .portrait-arch img { object-fit:cover; }
+}
+@media(max-width:760px) and (max-height:680px) {
+ .cover-copy { top:10%; }
+ .cover-logo { width:76px; }
+ .cover-eyebrow { margin-bottom:8px; }
+ .cover-message { font-size:.75rem; margin-top:12px; }
+ .cover-name { max-height:90px; object-fit:contain; }
+ .cover-portrait { height:64%; bottom:86px; }
+ .cover-action { bottom:20px; }
+ .open-cover-button { min-height:52px; font-size:.71rem; }
+}
+@media(min-width:761px) and (max-height:650px) {
+ .cover-copy { top:42%; transform:translateY(-50%); }
+ .cover-logo { width:80px; }
+ .cover-brand h1 { width:240px; }
+ .cover-message { display:none; }
+ .cover-action { bottom:7%; }
+}
+@media(prefers-reduced-motion:reduce) { .cover-sparkles span { animation:none; } }
+
+.cover-logo { transform: translateX(1.3%); } .hero-copy .custom-monogram { transform: translateX(1.3%); }</style>
 </head>
 <body>
-<div class="opening-stage stationery-opening">
-  <div class="opening-photo"><img src="vivian-lustre.png" alt="Vivian em seu vestido de quinze anos sob um lustre" fetchpriority="high"></div>
-  <div class="opening-panel">
-    <p class="opening-kicker">Uma noite para florescer</p>
-    <div class="stationery-monogram"><img src="vivian-logo.png?v=4" alt="Logo XV de Vivian"></div>
-    <h1 class="custom-title"><img src="vivian-titulo.png?v=4" alt="Vivian XV"></h1>
-    <p class="stationery-age">QUINZE ANOS</p>
-    <span class="stationery-rule" aria-hidden="true"></span>
-    <p class="opening-date">25 · 11 · 2026</p>
-    <p class="stationery-note">Uma noite especial.<br>Uma lembrança para sempre.</p>
-    <button class="seal-button" type="button">Clique aqui para abrir o convite <span aria-hidden="true">→</span></button>
+<div class="opening-stage spotlight-opening" aria-label="Abrir o convite de Vivian">
+  <div class="cover-orbit" aria-hidden="true"></div>
+  <div class="cover-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+  <p class="cover-topline">Uma noite para florescer</p>
+  <div class="cover-portrait"><img src="vivian-abertura-recorte.png" alt="Vivian sorrindo com seu vestido rosa de quinze anos" fetchpriority="high"></div>
+  <div class="cover-copy">
+    <p class="cover-eyebrow">Você faz parte deste sonho</p>
+    <div class="cover-brand">
+      <img class="cover-logo" src="vivian-logo.png?v=4" alt="Logo XV de Vivian">
+      <h1><img class="cover-name" src="vivian-titulo.png?v=4" alt="Vivian XV"></h1>
+    </div>
+    <p class="cover-date">25 <span>·</span> 11 <span>·</span> 2026</p>
+    <p class="cover-message">Uma noite para guardar<br>para sempre.</p>
   </div>
-</div><main class="invitation"><nav class="floating-nav" aria-label="Navegação do convite"><a href="#inicio" aria-label="Ir para o início">XV</a><div><a href="#fotos">Fotos</a><a href="#data">Data</a><a href="#guia">Guia</a></div></nav><section class="hero section" id="inicio"><div class="floral-accent hero-flowers top" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="floral-accent hero-flowers bottom" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="hero-copy"><p class="eyebrow">Uma Celebração Em Flor</p><div class="custom-monogram "><img src="vivian-logo.png?v=4" alt="Logo XV de Vivian"></div><h1 class="display-title custom-title"><img src="vivian-titulo.png?v=4" alt="Vivian XV"></h1><div class="poem"><p>Há tempos que passam</p><p>e tempos que florescem.</p><p>Quinze anos não contam só dias:</p><p>guardam sonhos, abraços e começos.</p></div><span class="delicate-rule"></span><p class="welcome-copy">Entre memórias que me trouxeram até aqui e sonhos que já começam a florescer, quero ter você comigo nesta noite tão especial.</p><a class="scroll-cue" href="#fotos"><span>Continue O Convite</span><i>↓</i></a></div><figure class="hero-portrait"><div class="portrait-arch"><img src="vivian-arco.png" alt="Vivian sorrindo com vestido rosa e tiara" loading="eager"/></div><figcaption><span>Quinze Anos</span><strong>Um Novo Capítulo</strong></figcaption></figure></section><section class="photo-story section" id="fotos"><header class="photo-story-heading"><div class="section-label"><span></span><p>Uma História Em Flor</p><span></span></div><h2>Sonhos Que Ganham Forma</h2><p>Um instante entre a infância que guardo com carinho e todos os caminhos lindos que ainda quero viver.</p></header><div class="photo-collage"><figure class="photo-card mirror-photo"><img src="vivian-espelho.png" alt="Vivian observando sua tiara no espelho" loading="lazy"/><figcaption>Memórias Que Brilham</figcaption></figure><figure class="photo-card chandelier-photo"><img src="vivian-lustre.png" alt="Vivian posando sob um lustre clássico" loading="lazy"/><figcaption>Uma Noite Inesquecível</figcaption></figure><figure class="photo-card arch-photo"><img src="vivian-arco.png" alt="Retrato de Vivian com vestido de quinze anos" loading="lazy"/><figcaption>Vivian XV</figcaption></figure></div></section><section class="date-section section" id="data"><div class="floral-accent date-flowers left" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="floral-accent date-flowers right" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="date-card"><div class="section-label"><span></span><p>Nosso Encontro</p><span></span></div><p class="weekday">Quarta-Feira</p><div class="date-lockup"><span class="month">Novembro</span><strong>25</strong><span class="year">2026</span></div><p class="time">Às <strong>20h30</strong></p><div class="venue-divider"><span>⌖</span></div><h2>Casa De Festas Elite</h2><address>Rua Vítor Meireles, 485<br/>Riachuelo, Rio De Janeiro</address><div class="map-frame"><iframe title="Mapa para Casa de Festas Elite" src="https://www.google.com/maps?q=Casa%20de%20Festas%20Elite%2C%20Rua%20V%C3%ADtor%20Meireles%2C%20485%2C%20Riachuelo%2C%20Rio%20de%20Janeiro&amp;output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+de+Festas+Elite%2C+Rua+V%C3%ADtor+Meireles%2C+485%2C+Riachuelo%2C+Rio+de+Janeiro" target="_blank" rel="noreferrer">Abrir Rota No Mapa <span>↗</span></a></div><div class="rsvp"><p>Confirme Sua Presença Até</p><strong>15 De Outubro</strong><a href="https://wa.me/5521959324408?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Vivian." target="_blank" rel="noreferrer"><span>✓</span> Confirmar Pelo WhatsApp</a><small>+55 21 95932-4408</small></div></div></section><section class="countdown-section section" id="contagem"><div class="stars" aria-hidden="true"><span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span></div><div class="section-label"><span></span><p>Contagem Regressiva</p><span></span></div><h2>Falta Pouco Para A Nossa Noite</h2><p>Cada dia que passa deixa esse sonho mais perto de florescer.</p><div class="countdown" aria-live="polite" aria-label="Tempo restante para a festa"><div class="countdown-item"><strong>00</strong><span>Dias</span></div><div class="countdown-item"><strong>00</strong><span>Horas</span></div><div class="countdown-item"><strong>00</strong><span>Minutos</span></div><div class="countdown-item"><strong>00</strong><span>Segundos</span></div></div><div class="save-date"><span>Reserve Esta Data</span><strong>25 · 11 · 2026</strong></div></section><section class="guide-section section" id="guia"><div class="floral-accent guide-flowers" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="section-label"><span></span><p>Guia Do Convidado</p><span></span></div><h2>Alguns Detalhes Importantes</h2><div class="detail-grid"><article class="detail-card"><span class="detail-icon" aria-hidden="true">◇</span><div><h3>Traje</h3><p>Esporte fino. Por carinho ao tema da noite, não use roxo ou lilás.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✓</span><div><h3>Confirmação</h3><p>Confirme sua presença até 15 de outubro.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">◷</span><div><h3>Horário</h3><p>Chegue no horário para não perder nenhum momento.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✉</span><div><h3>Convite</h3><p>Este convite é pessoal e não se estende a acompanhantes.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">♧</span><div><h3>Pertences</h3><p>Cuide dos seus itens pessoais durante a festa.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✦</span><div><h3>Lembrete</h3><p>Venha pronto para aproveitar muito e criar memórias.</p></div></article></div><div class="gift-panel"><p class="gift-kicker">Com Carinho</p><h2>Para Presentear</h2><p class="gift-subtitle">Sugestões De Presentes</p><div class="gift-tags"><span>Bijuteria Dourada</span><span>Roupas — Tamanho P/36</span><span>Perfume — Amadeirado/Floral</span><span>Calçado 37–38</span><span>Maquiagem — Tons Quentes</span></div><div class="pix-card"><div class="pix-icon" aria-hidden="true">◇</div><div><span>Chave Pix</span><strong>+55 21 95932-4408</strong></div><button type="button">Copiar</button></div><p class="presence-gift">Sua presença e seu carinho já são o meu maior presente.</p></div></section><footer><div class="floral-accent footer-flowers" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="custom-monogram small"><img src="vivian-logo.png?v=4" alt="Logo XV de Vivian"></div><p>Com Amor, Vivian</p><span>25 · 11 · 2026</span></footer></main>
+  <div class="cover-action">
+    <button class="open-cover-button" type="button">Clique aqui para abrir o convite <span aria-hidden="true">→</span></button>
+    <p>Um convite especial para você</p>
+  </div>
+</div><main class="invitation"><nav class="floating-nav" aria-label="Navegação do convite"><a href="#inicio" aria-label="Ir para o início">XV</a><div><a href="#fotos">Fotos</a><a href="#data">Data</a><a href="#guia">Guia</a></div></nav><section class="hero section" id="inicio"><div class="floral-accent hero-flowers top" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="floral-accent hero-flowers bottom" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="hero-copy"><p class="eyebrow">Uma Celebração Em Flor</p><div class="custom-monogram "><img src="vivian-logo.png?v=4" alt="Logo XV de Vivian"></div><h1 class="display-title custom-title"><img src="vivian-titulo.png?v=4" alt="Vivian XV"></h1><div class="poem"><p>Há tempos que passam</p><p>e tempos que florescem.</p><p>Quinze anos não contam só dias:</p><p>guardam sonhos, abraços e começos.</p></div><span class="delicate-rule"></span><p class="welcome-copy">Entre memórias que me trouxeram até aqui e sonhos que já começam a florescer, quero ter você comigo nesta noite tão especial.</p><a class="scroll-cue" href="#fotos"><span>Continue O Convite</span><i>↓</i></a></div><figure class="hero-portrait"><div class="portrait-arch"><img src="vivian-retrato-v5.png" alt="Vivian de vestido rosa diante de um arco iluminado" loading="eager"/></div><figcaption><span>Quinze Anos</span><strong>Um Novo Capítulo</strong></figcaption></figure></section><section class="photo-story section" id="fotos"><header class="photo-story-heading"><div class="section-label"><span></span><p>Uma História Em Flor</p><span></span></div><h2>Sonhos Que Ganham Forma</h2><p>Um instante entre a infância que guardo com carinho e todos os caminhos lindos que ainda quero viver.</p></header><div class="photo-collage"><figure class="photo-card mirror-photo"><img src="vivian-espelho.png" alt="Vivian observando sua tiara no espelho" loading="lazy"/><figcaption>Memórias Que Brilham</figcaption></figure><figure class="photo-card chandelier-photo"><img src="vivian-lustre.png" alt="Vivian posando sob um lustre clássico" loading="lazy"/><figcaption>Uma Noite Inesquecível</figcaption></figure><figure class="photo-card arch-photo"><img src="vivian-arco.png" alt="Retrato de Vivian com vestido de quinze anos" loading="lazy"/><figcaption>Vivian XV</figcaption></figure></div></section><section class="date-section section" id="data"><div class="floral-accent date-flowers left" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="floral-accent date-flowers right" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="date-card"><div class="section-label"><span></span><p>Nosso Encontro</p><span></span></div><p class="weekday">Quarta-Feira</p><div class="date-lockup"><span class="month">Novembro</span><strong>25</strong><span class="year">2026</span></div><p class="time">Às <strong>20h30</strong></p><div class="venue-divider"><span>⌖</span></div><h2>Casa De Festas Elite</h2><address>Rua Vítor Meireles, 485<br/>Riachuelo, Rio De Janeiro</address><div class="map-frame"><iframe title="Mapa para Casa de Festas Elite" src="https://www.google.com/maps?q=Casa%20de%20Festas%20Elite%2C%20Rua%20V%C3%ADtor%20Meireles%2C%20485%2C%20Riachuelo%2C%20Rio%20de%20Janeiro&amp;output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+de+Festas+Elite%2C+Rua+V%C3%ADtor+Meireles%2C+485%2C+Riachuelo%2C+Rio+de+Janeiro" target="_blank" rel="noreferrer">Abrir Rota No Mapa <span>↗</span></a></div><div class="rsvp"><p>Confirme Sua Presença Até</p><strong>15 De Outubro</strong><a href="https://wa.me/5521959324408?text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Vivian." target="_blank" rel="noreferrer"><span>✓</span> Confirmar Pelo WhatsApp</a><small>+55 21 95932-4408</small></div></div></section><section class="countdown-section section" id="contagem"><div class="stars" aria-hidden="true"><span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span></div><div class="section-label"><span></span><p>Contagem Regressiva</p><span></span></div><h2>Falta Pouco Para A Nossa Noite</h2><p>Cada dia que passa deixa esse sonho mais perto de florescer.</p><div class="countdown" aria-live="polite" aria-label="Tempo restante para a festa"><div class="countdown-item"><strong>00</strong><span>Dias</span></div><div class="countdown-item"><strong>00</strong><span>Horas</span></div><div class="countdown-item"><strong>00</strong><span>Minutos</span></div><div class="countdown-item"><strong>00</strong><span>Segundos</span></div></div><div class="save-date"><span>Reserve Esta Data</span><strong>25 · 11 · 2026</strong></div></section><section class="guide-section section" id="guia"><div class="floral-accent guide-flowers" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="section-label"><span></span><p>Guia Do Convidado</p><span></span></div><h2>Alguns Detalhes Importantes</h2><div class="detail-grid"><article class="detail-card"><span class="detail-icon" aria-hidden="true">◇</span><div><h3>Traje</h3><p>Esporte fino. Por carinho ao tema da noite, não use roxo ou lilás.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✓</span><div><h3>Confirmação</h3><p>Confirme sua presença até 15 de outubro.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">◷</span><div><h3>Horário</h3><p>Chegue no horário para não perder nenhum momento.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✉</span><div><h3>Convite</h3><p>Este convite é pessoal e não se estende a acompanhantes.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">♧</span><div><h3>Pertences</h3><p>Cuide dos seus itens pessoais durante a festa.</p></div></article><article class="detail-card"><span class="detail-icon" aria-hidden="true">✦</span><div><h3>Lembrete</h3><p>Venha pronto para aproveitar muito e criar memórias.</p></div></article></div><div class="gift-panel"><p class="gift-kicker">Com Carinho</p><h2>Para Presentear</h2><p class="gift-subtitle">Sugestões De Presentes</p><div class="gift-tags"><span>Bijuteria Dourada</span><span>Roupas — Tamanho P/36</span><span>Perfume — Amadeirado/Floral</span><span>Calçado 37–38</span><span>Maquiagem — Tons Quentes</span></div><div class="pix-card"><div class="pix-icon" aria-hidden="true">◇</div><div><span>Chave Pix</span><strong>+55 21 95932-4408</strong></div><button type="button">Copiar</button></div><p class="presence-gift">Sua presença e seu carinho já são o meu maior presente.</p></div></section><footer><div class="floral-accent footer-flowers" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><i class="accent-leaf leaf-a"></i><i class="accent-leaf leaf-b"></i><i class="accent-leaf leaf-c"></i></div><div class="custom-monogram small"><img src="vivian-logo.png?v=4" alt="Logo XV de Vivian"></div><p>Com Amor, Vivian</p><span>25 · 11 · 2026</span></footer></main>
 <script>
 const EVENT_DATE = new Date("2026-11-25T20:30:00-03:00").getTime();
 const stage = document.querySelector(".opening-stage");
 const invitation = document.querySelector(".invitation");
-const seal = document.querySelector(".seal-button");
+const seal = document.querySelector(".open-cover-button");
 const countdownItems = [...document.querySelectorAll(".countdown-item")];
 const pixButton = document.querySelector(".pix-card button");
 document.body.classList.add("invitation-locked");
+invitation.inert = true;
 
 seal?.addEventListener("click", () => {
   if (stage.classList.contains("opening")) return;
@@ -1968,6 +2053,7 @@ seal?.addEventListener("click", () => {
   window.setTimeout(() => {
     stage.remove();
     invitation.classList.add("visible");
+    invitation.inert = false;
     document.body.classList.remove("invitation-locked");
     window.scrollTo({ top: 0, behavior: "auto" });
   }, 760);
