@@ -2015,14 +2015,30 @@ footer .custom-monogram { width: 104px; padding: 7px; background: #fff; border-r
 }
 @media(prefers-reduced-motion:reduce) { .cover-sparkles span { animation:none; } }
 
-.cover-logo { transform: translateX(1.3%); } .hero-copy .custom-monogram { transform: translateX(1.3%); }</style>
+.cover-logo { transform: translateX(1.3%); } .hero-copy .custom-monogram { transform: translateX(1.3%); }
+/* Fine champagne highlights, confined to the cover. */
+.cover-gold-dust { position:absolute; z-index:1; inset:0; pointer-events:none; }
+.cover-gold-dust i { position:absolute; display:block; width:3px; height:3px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#fffbea,#d5b27b 60%,#b98b54); box-shadow:0 0 7px 2px #f9e0b345; opacity:.8; }
+.cover-gold-dust i:nth-child(1) { left:9%; top:17%; width:4px; height:4px; }
+.cover-gold-dust i:nth-child(2) { left:12%; top:21%; width:2px; height:2px; }
+.cover-gold-dust i:nth-child(3) { left:7%; top:24%; }
+.cover-gold-dust i:nth-child(4) { left:15%; top:13%; width:2px; height:2px; opacity:.6; }
+.cover-gold-dust i:nth-child(5) { right:8%; top:15%; }
+.cover-gold-dust i:nth-child(6) { right:11%; top:11%; width:2px; height:2px; }
+.cover-gold-dust i:nth-child(7) { right:6%; top:21%; width:2px; height:2px; opacity:.5; }
+.cover-gold-dust i:nth-child(8) { right:10%; bottom:31%; width:4px; height:4px; }
+.cover-gold-dust i:nth-child(9) { right:7%; bottom:35%; width:2px; height:2px; }
+.cover-gold-dust i:nth-child(10) { right:14%; bottom:28%; width:2px; height:2px; opacity:.55; }
+.cover-gold-dust i:nth-child(11) { left:45%; top:42%; width:2px; height:2px; opacity:.6; }
+.cover-gold-dust i:nth-child(12) { left:49%; top:38%; }
+</style>
 </head>
 <body>
 <div class="opening-stage spotlight-opening" aria-label="Abrir o convite de Vivian">
   <div class="cover-orbit" aria-hidden="true"></div>
-  <div class="cover-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+  <div class="cover-gold-dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <p class="cover-topline">Uma noite para florescer</p>
-  <div class="cover-portrait"><img src="vivian-abertura-recorte.png" alt="Vivian sorrindo com seu vestido rosa de quinze anos" fetchpriority="high"></div>
+  <div class="cover-portrait"><img src="vivian-recorte-original-v6.png" alt="Vivian sorrindo com seu vestido rosa de quinze anos" fetchpriority="high"></div>
   <div class="cover-copy">
     <p class="cover-eyebrow">Você faz parte deste sonho</p>
     <div class="cover-brand">
